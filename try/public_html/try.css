@@ -1,0 +1,44 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing:border-box;
+}
+header{
+    background-color:darkorange;
+    padding:10px;
+
+    
+}
+
+.section1{
+    background-image: url("banner.jpg");
+    height: 260px; 
+    width: 100%;
+    background-size: cover;
+        
+}
+.banner{
+    margin-left: 20px;
+    
+    width: 35%;
+    height: 250px;
+    border: 2px dashed lightseagreen;
+    background-color: lightblue;
+    padding: 60px;
+    text-align: justify;
+    line-height: 30px;
+    margin-left: 40px;
+    
+        
+}
+nav ul li{
+    align-content: center;
+    background-color: red;
+    text-align: center;
+    
+}
+li{
+     align-content: center;
+    background-color: red;
+    text-align: center;
+}
