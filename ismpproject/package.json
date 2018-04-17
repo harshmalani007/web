@@ -1,0 +1,6 @@
+{
+    "name": "ismpproject", "version": "1.0.0", "keywords": [
+        "util", "functional", "server", "client", "browser"
+    ], "author": "Harsh", "contributors": [
+    ], "dependencies": {}
+}
