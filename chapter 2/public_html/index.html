@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>chapter 2</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>
+            <h1>Components of Storage System Environment:</h1>
+           
+                <ul>
+                    <li>Describe the three components of storage system environment.</li>
+                    <li>Host, Connectivity and Storage</li>
+                    <li>Detail Host physical and logical components.</li>
+                    <li>Describe interface protocol</li>
+                    <li>PCI, IDE/ATA and SCSI</li>
+                    <li>Describe storage options.</li>
+                    <li>Tape, optical and disk drives</li>
+                </ul>
+            <h1>Host</h1>
+            
+            <ul>
+                <li>Applications runs on hosts.</li>
+                <li>Hosts can range from simple laptops to complex server clusters.</li>
+                <li><ul>Physical components of host.
+                <li>CPU</li>
+                <img height="200px" width="200px" src="Picture1.jpg" alt=""/>
+                <li>Storage</li>
+                <img height="200px" width="200px" src="Picture2.png" alt=""/>
+                <li> I/O device</li></li>
+                <img height="200px" width="200px" src="Picture3.jpg" alt=""/>
+                <img height="200px" width="200px" src="Picture4.png" alt=""/>
+           </ul>
+           </ul>
+            <h1>Host: Logical Components </h1>
+            <img height="300px" width="400px"  src="Picture5.png" alt=""/>
+            <ul> 
+            <h2>Application</h2>
+            <li>Interface between user and the host.</li>
+            <li>Conventional business applications have a three-tiered architecture.</li>
+            <li>Application data access can be classified as:</li>
+            <ul>
+                <li>Block-level access</li>
+                <li>File-level access</li>
+            </ul>
+            </ul> 
+            <ul>
+                <h2>Operating system</h2>
+                <li>Resides between the applications and the hardware.</li>
+                <li>Controls the environment.</li>
+           </ul>
+           <h1>Logical Components of the Host: LVM</h1>
+           <img height="200px" width="200px" src="Picture6.png" alt=""/>
+           <ul>
+                <li>Responsible for creating and controlling host level logical storage</li>
+                <li>Usually offered as part of the operating system or as third party host software.</li>
+                <li>LVM Components:</li>
+                <ul>
+                    <li>Physical Volumes</li>
+                    <li>Volume Groups</li>
+                    <li>Logical Volumes</li>
+                </ul>
+            </ul>
+           <h1>Volume Groups</h1>
+           <img height="200px" width="200px" src="Picture7.png" alt=""/>
+           <ul>
+               <li>One or more Physical Volumes form a Volume Group.</li>
+               <li>LVM manages Volume Groups as a single entity.</li>
+               <li>Physical Volumes can be added and removed from a Volume Group as necessary.</li>
+               <li>Physical Volumes are typically divided into contiguous equal-sized disk blocks.</li>
+               <li>A host will always have at least one disk group for the Operating System.</li>
+           </ul>
+           <h2>Device Drivers</h2>
+           <ul>
+               <li>Enables operating system to recognize the device.</li>
+               <li>Provides API to access and control devices.</li>
+               <li>Hardware dependent and operating system specific.</li>
+           </ul>
+           <h2>File System</h2>
+           <ul>
+               <li>File is a collection of related records or data stored as a unit.</li>
+               <li>File system is hierarchical structure of files.</li>
+           </ul>
+           <h1>How Files are Moved to and from Storage:</h1>
+           <img height="300px" width="400px" src="Picture8.png" alt=""/>
+           <h1>Connectivity</h1>
+           <ul>
+               <li>Interconnection between hosts or between a host and any storage devices.</li>
+               <li>Physical Components of Connectivity are:</li>
+               <ul>
+                   <li>Bus, port and cable</li>
+               </ul>
+               <img  height="200px" width="300px" src="Picture9.png" alt=""/>
+           </ul>
+           <h1>Popular Connectivity Options</h1>
+           <ul>
+               <Li>PCI</Li>
+               <li>IDE(Integrated Device Electronics )/ATA( Advanced Technology Attachment)</li>
+               <li>Serial Advanced Technology Attachment(SATA)</li>
+               <li>SCSI</li>
+               <ul>
+                   <li>Parallel SCSI</li>
+                   <li>Serial SCSI</li>
+               </ul>
+           </ul>
+           <h1>Storage: Medias and Options</h1>
+           <ul>
+               <li>Magnetic Tape</li>
+               <li>Optical Disks</li>
+               <li>Disk Drive</li>
+               
+           </ul>
+           
+           <h1>Disk Drive</h1>
+           <ul>
+               <li>List and discuss various disk drive components.</li>
+               <li>Discuss disk drive geometry.</li>
+               <li>Describe CHS and LBA addressing scheme.</li>
+               <li>Disk drive performance.</li>
+               <li>Law’s governing disk drive performance.</li>
+           </ul>
+           <h1>Disk Drive Components</h1>
+           <img  height="200px" width="300px"src="Picture10.png" alt=""/>
+           <ul>
+               <li>Platter</li>
+               <li>Spindle</li>
+               <li>Read/Write head</li>
+               <li>Actuator arm assembly</li>
+               <li>Controller</li>
+           </ul>
+           <h1>Physical Disk Structure</h1>
+           <img height="200px" width="300px" src="Picture11.png" alt=""/>
+           <h1>Logical Block Addressing</h1>
+           <img height="200px" width="300px" src="Picture12.png" alt=""/>
+           <h1>Disk Drive Performance</h1>
+           <ul>
+               <li>Electromechanical device.</li>
+               <li>Disk Service Time</li>
+           </ul>
+           <h3>Disk service time =Seek time + (rotational delay/speed in RPM)+ (block size/transfer rate)</h3>
+           <h1>Disk Drive Performance:</h1>
+           <ul>
+               <li>Seek Time</li>
+               <li>Rotational Speed/Latency</li>
+               <li>Data Transfer Rate</li>
+               <img height="200px" width="300px" src="Picture13.png" alt=""/>
+           </ul>
+           <h1>Fundamental Laws Governing Disk Performance</h1>
+           <ul>
+               <li>Queue</li>
+               <li>Disk I/O Controller</li>
+               <li>Arrival Rate</li>
+               <li>Little’s Law</li>
+           </ul>
+           </div>
+    </body>
+</html>
