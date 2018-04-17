@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Shop Till You Drop</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <img src="head.jpg" width="100%" height="200px">
+        <form action="Exp8a.php" method="post"> 
+            <input type="checkbox" name="check_list[]" value="shirt1">Rs.500
+            <img src="shirt1.jpeg" width="300px" height="300px" name="shirt1">
+            <input type="checkbox" name="check_list[]" value="shirt2">Rs.600
+            <img src="hood.jpg" width="300px" height="300px" name="shirt2">
+            <br>
+            <label>Clothing Item<sup>*</sup></label><br>
+            <input type="radio" name="gender" value="M">Men's Shirt<br>
+            <input type="radio" name="gender" value="W">Women's Shirt<br>
+            <input type="radio" name="gender" value="Child">Children's Shirt<br><br>
+            <table>
+                <tr>
+                    <td>Quantity<sup>*</sup></td>
+                    <td>Size<sup>*</sup></td>
+                    <td>Color<sup>*</sup></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" name="quantity">
+                    </td>
+                    <td>
+                        <select name="size">
+                            <option value="26">26</option>
+                            <option value="28">28</option>
+                            <option value="30">30</option>
+                            <option value="32">32</option>
+                            <option value="34">34</option>
+                            <option value="36">36</option>
+                            <option value="38">38</option>
+                            <option value="40">40</option>
+                            <option value="42">42</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select name="color">
+                            <option value="Red">Red</option>
+                            <option value="Blue">Blue</option>
+                            <option value="Green">Green</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+            <label></label>
+            <input type="submit" name="submit" value="Next">
+        </form>
+    </body>
+</html>

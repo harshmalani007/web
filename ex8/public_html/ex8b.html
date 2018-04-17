@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Shipping Information</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <form action="Exp8b.php" method="post">
+            <table>
+                <tr>
+                    <td>
+                        <label>First Name<sup>*</sup></label>
+                    </td>
+                    <td>
+                        <input type="text" name="fname" required autofocus>
+                    </td>
+                </tr>
+                 <tr>
+                    <td>
+                        <label>Last Name<sup>*</sup></label>
+                    </td>
+                    <td>
+                        <input type="text" name="lname" required>
+                    </td>
+                </tr>
+                 <tr>
+                     <td>
+                         <label>Street Address<sup>*</sup></label>
+                     </td>
+                     <td>
+                         <textarea rows="8" cols="40" name="add1" required>Enter Address</textarea>
+                     </td>
+                </tr>
+                 <tr>
+                     <td>
+                         <label>Address Line 2</label>
+                     </td>
+                    <td>
+                        <textarea rows="8" cols="40" name="add2" required>Enter Address</textarea>
+                    </td>
+                </tr>
+                 <tr>
+                     <td>
+                         <label>City<sup>*</sup></label>
+                     </td>
+                     <td>
+                         <input type="text" name="city" required>
+                     </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>State<sup>*</sup></label>
+                    </td>
+                    <td>
+                        <select name="state" required>
+                            <option value="Chennai">Chennai</option>
+                            <option value="Coimbatore">Coimbatore</option>
+                            <option value="Delhi">Delhi</option>
+                        </select>
+                    </td>
+                </tr>
+                 <tr>
+                     <td>
+                         <label>Zip Code<sup>*</sup></label>
+                     </td>
+                    <td><input type="text" name="zip" required></td>
+                </tr>
+                 <tr>
+                     <td>
+                         <label>Phone Number<sup>*</sup></label>
+                     </td>
+                     <td>
+                         <input type="text" name="phno" required>
+                     </td>
+                </tr>
+                 <tr>
+                     <td>
+                         <label>Email Address<sup>*</sup></label>
+                     </td>
+                     <td>
+                         <input type="text" name="email" required>
+                     </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Shipping<sup>*</sup></label>
+                    </td>
+                    <td>
+                        <input type="radio" name="radio" value="Standard" checked>Standard Shipping
+                        <input type="radio" name="radio" value="Express">Express Shipping
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="submit" name="submit" value="submit">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
