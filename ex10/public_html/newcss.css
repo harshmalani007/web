@@ -1,0 +1,27 @@
+CarDetails{
+    background-color: skyblue;
+   
+   
+}
+
+details{
+    display: block;
+}
+customername{
+   padding-bottom: 10px; 
+    font-size: 28px;
+    color: red;
+}
+carcolor{
+    position: relative;
+    top:5px;
+     font-size: 24px;
+    
+}
+
+carbrand{
+    position: relative;
+    top:10px;
+     font-size: 22px;
+     color: green;
+}

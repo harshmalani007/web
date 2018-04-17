@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?xml-stylesheet type="text/css" href="newcss.css" ?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<CarDetails>
+    <details>
+        <customername>Manu</customername>
+        <carcolor>Blue</carcolor>
+        <carbrand>BMW</carbrand>
+    </details>
+    
+    <details>
+        <customername>Rema</customername>
+        <carcolor>Red</carcolor>
+        <carbrand>AUDI</carbrand>
+    </details>
+    
+    <details>
+        <customername>Tina</customername>
+       <carcolor>Black</carcolor>
+        <carbrand>FORD</carbrand>
+    </details>
+    
+</CarDetails><?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<root>
+    
+</root>
