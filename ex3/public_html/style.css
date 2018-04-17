@@ -1,0 +1,179 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing:border-box;
+}
+header{
+    background-color:darkorange;
+    padding:10px;
+
+    
+}
+.photo{
+    background-image:url("photo.jpg");
+    background-size: cover;
+    height: 150px;
+    width: 150px;
+    border: 2px solid white;
+        display: inline-block;
+    
+}
+.title1{
+    
+    
+    text-align: center;
+    font-family: courier;
+    font-size: 2.5em;
+    color: white;
+    display: inline-block;
+    text-align: center;
+    width:70%;
+    text-shadow:black 4px 4px;
+}
+nav ul li{
+    display: inline-block;
+    width: 23%;
+    height: 30px;
+    padding-top: 10px;
+    cursor: pointer;
+    
+}
+
+
+ul{
+    background-color:blue;
+    
+}
+ul li a{
+    text-decoration: none;
+    color:white;
+    padding:150px;
+    
+}
+ul li:hover{
+    background-color: red;
+    
+}
+.section1{
+    background-image: url("banner.jpg");
+    height: 260px; 
+    width: 100%;
+    background-size: cover;
+        
+}
+.banner{
+    margin-left: 20px;
+    
+    width: 35%;
+    height: 250px;
+    border: 2px dashed lightseagreen;
+    background-color: lightblue;
+    padding: 60px;
+    text-align: justify;
+    line-height: 30px;
+    margin-left: 40px;
+    
+        
+}
+.section2{
+    background-color: lightpink;
+    
+    
+}
+
+.box{
+    margin: 2%;
+    display: inline-block;
+    width: 20%;
+    background-image: url("you.png");
+    height:250px;
+    background-size: cover;
+    position: relative;
+    text-shadow:orange -15px -15px;
+    border: black;
+}
+.box_1{
+    margin: 2%;
+    display: inline-block;
+    width: 15%;
+    background-image: url("only.jpeg");
+    height:250px;
+    background-size: cover;
+    position: relative;
+    text-shadow:yellow -15px -15px;
+}
+.box_2{
+     margin: 2%;
+    display: inline-block;
+    width: 28%;
+    background-image: url("live.png");
+    height:250px;
+    background-size: cover;
+    position: relative;
+    text-shadow:yellow -15px -15px;
+}
+.box_3{
+     margin: 2%;
+    display: inline-block;
+    width: 18%;
+    background-image: url("once.jpg");
+    height:250px;
+    background-size: cover;
+    position: relative;
+     text-shadow:yellow -15px -15px;
+}
+.title{
+    color:red;
+    text-align: center;
+    padding:5%;
+    background-size: rgba(21,20,20,0.4);
+    border: 2px solid red;
+    font-size: 32px;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+}
+.section3{
+    background-color: skyblue;
+    
+}
+.box1{
+     margin: 2%;
+    display: inline-block;
+    width:18%;
+    background-image: url("home.gif");
+    height:250px;
+    background-size: cover;
+     border: 2px solid white;
+}
+.box2{
+     margin: 2%;
+    display: inline-block;
+    width:40%;
+    background-image: url("yolo.gif");
+    height:280px;
+    background-size: cover;
+    border: 2px solid white;
+}
+.box3{
+    margin: 2%;
+    display: inline-block;
+    width:20%;
+    background-image: url("gaming.gif");
+    height:280px;
+    background-size: cover;
+    border: 2px solid white;
+}
+
+footer{
+  background: linear-gradient(to right, yellow ,pink);
+  padding: 20px;
+  text-align: center;
+  font-style: italic;
+}
+.foot{
+    text-decoration: underline;
+    color: red;
+    font-size: 26px;
+    
+}
