@@ -1,0 +1,194 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing:border-box;
+}
+body{
+    background-image: url('7.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    
+}
+.banner{
+    background-image: url('8.jpg');
+    background-size: cover;
+    height: 400px;
+    width: 100%;
+
+}
+nav{
+    background-color: rgba(255,255,255,0.5);
+    width: 100%;
+    position: fixed;
+
+}
+nav ul li a{
+    text-decoration: none;
+    font-family: Helvetica;
+    font-weight: bold;
+    color: red;
+    font-size: 1.2em;
+
+}
+nav ul{
+    text-align: center;
+    
+
+}
+nav ul li{
+    display: inline-block;
+    height: 50px;
+    width: 24%;
+    padding: 10px;
+    cursor: pointer;
+
+}
+nav ul li:hover{
+    background-color: #dff0d8;
+    opacity: 0.3;
+    
+
+}
+nav ul li a:hover{
+    color: rgba(255,255,255,0);
+    
+
+}
+.title1{
+    color: aquamarine;
+    text-align: center;
+    height: 60px;
+    padding: 10px;
+    border: 2px solid red;
+    font-size: 32px;
+    background-color: rgba(21,20,20,0.4);
+    position: absolute;
+    top: 200px;
+    right: 0px;
+
+}
+.img1{
+    position: absolute;
+    top: 75px;
+    left: 100px;
+
+}
+.img2{
+    position: absolute;
+    top: 190px;
+    left: 220px;
+    z-index: 1;
+
+}
+.img3{
+    position: absolute;
+    top: 75px;
+    left: 350px;
+
+}
+.heading1{
+    height: 50px;
+    font-size: 32px;
+    color: red;
+    background-color: lightblue;
+
+}
+.f1{
+    background-image: url('9.jpg');
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    box-shadow: 10px    10px    5px red;
+    position: absolute;
+    top: 500px;
+    left: 50px;
+
+}
+.f1:hover{
+    opacity: 0;
+
+}
+.f1text{
+    width: 300px;
+    position: absolute;
+    top: 800px;
+    left: 90px;
+    color: black;
+    text-align: justify;
+    border: 5px dashed  green;
+
+}
+.f2{
+    background-image: url('10.jpg');
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    box-shadow: 10px    10px    5px red;
+    position: absolute;
+    top: 500px;
+    left: 450px;
+
+}
+.f2:hover{
+    opacity: 0;
+
+}
+.f2text{
+    width: 300px;
+    position: absolute;
+    top: 800px;
+    left: 490px;
+    color: black;
+    text-align: justify;
+    border: 5px dashed  green;
+
+}
+.heading2{
+    height: 50px;
+    font-size: 32px;
+    color: red;
+    background-color: lightblue;
+    position: relative;
+    top: 550px;
+    
+
+}
+.table{
+    position: relative;
+    top: 600px;
+    width:  50%;
+    border-collapse: collapse;
+    left: 200px;
+
+}
+td,th{
+    border: 1px solid   red;
+}
+tr:nth-child(odd){
+    background-color: skyblue;
+
+}
+tr:nth-child(even){
+    background-color: pink;
+
+}
+tr:hover{
+    opacity: 1;
+    background-color: lightgreen;
+    
+
+}
+.timg{
+    width: 100px;
+    height: 50px;
+    float: right;
+
+}
+.itemimg{
+    opacity: 0;
+
+}
+.itemname:hover+.itemimg{
+    opacity: 1;
+
+}
