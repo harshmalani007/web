@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>EX 6 - JAVASCRIPT</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript">
+            function disptime()
+            {
+                var d = new Date(); 
+                var h = d.getHours();
+                var m = d.getMinutes();
+                var s = d.getSeconds();
+                document.getElementById("time").innerHTML=h+":"+m+":"+s;
+                setInterval("disptime()",1000); 
+            }
+            
+            function paint()
+            {
+                var red = Math.floor(Math.random()*255);  
+                var blue = Math.floor(Math.random()*255);  
+                var green = Math.floor(Math.random()*255);  
+                var color= "rgb("+red+","+green+","+blue+")"; 
+                document.body.style.backgroundColor = color;
+                
+            }
+            
+            function incSize()
+            {
+                document.getElementById("p1").style="font-size:38px"; 
+            }
+            function decSize()
+            {
+                document.getElementById("p1").style="font-size:18px"; 
+            }
+
+
+            function Student(Fname,Lname,YOB)   
+            { 
+                this.Fname = Fname; 
+                this.Lname = Lname;
+                this.YOB = YOB;
+            }   
+            
+            var s = new Student(5);
+            s[0] = new Student('Leonardo','Decaprio',1976);
+            s[1] = new Student('Samuel','Jackson',1992);
+            s[2] = new Student('Bruce','Wills',1984);
+            s[3] = new Student('Ryan','Ghosling',1965);
+            s[4] = new Student('Clint','Eastwood',1935);
+            
+            function dispstud()
+            {
+//                alert(s[1].Fname);
+                for(var i=0;i<5;i++) 
+                {
+                    var First = s[i].Fname;
+                    var Last = s[i].Lname;
+                    var Year = s[i].YOB;
+                    document.getElementById("studname").innerHTML +=First+" "+Last+"<br/>";
+                    if(Year>=1980)
+                        document.getElementById("aft").innerHTML +=First+" "+Last+" : "+Year+"<br/>";
+                    else
+                        document.getElementById("bef").innerHTML +=First+" "+Last+" : "+Year+"<br/>";
+                        
+                } 
+            }
+        </script>
+    </head>
+    
+    <body>
+    <fieldset>   
+        <h1>Digital Clock</h1>
+        <!--<div id="time"></div>-->
+        <button id="time" onclick="disptime();">Show time</button>
+    </fieldset>
+        
+    <fieldset>  
+        <h1>Color me</h1>
+        <button id="color" onclick="paint();">Paint Me</button>
+    </fieldset>
+        
+    <fieldset>  
+        <h1>Dynamic font size</h1>
+        <p id="p1" onmouseover="incSize()" onmouseout="decSize()">
+            HOVER OVER ME
+        </p>
+    </fieldset>
+    
+
+		<SCRIPT>
+			var imgObj = null;
+			var animate ;
+			function init(){
+				imgObj = document.getElementById('myImage');
+				imgObj.style.position= 'relative'; 
+				imgObj.style.left = '0px'; 
+			}
+			function moveRight(){
+			   imgObj.style.left = parseInt(imgObj.style.left) + 10 + 'px';
+				   animate = setTimeout(moveRight,50); 
+			}
+			function stop(){
+			   clearTimeout(animate);
+			   imgObj.style.left = '0px'; 
+			}
+			window.onload =init;
+		</SCRIPT>
+		<fieldset>
+                    <IMG id="myImage" src="car.gif" alt="404" style="height: 80px;width: 120px"/> <br/>
+			<INPUT type="button" value="Accelerate" onclick="moveRight();" />
+			<INPUT type="button" value="Break" onclick="stop();" />
+		</fieldset>
+
+    
+    <fieldset>
+        <h1>Student details</h1>
+        <h2>First name and Second name</h2>
+        <div id='studname'></div>
+        <h2>Born before 1980</h2>
+        <div id='bef'></div>
+        <h2>Born after 1980</h2>
+        <div id='aft'></div>
+        <button id="std" onclick="dispstud();">Show</button>
+    </fieldset>
+    </body>
+</html>
