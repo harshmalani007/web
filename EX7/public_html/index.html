@@ -1,0 +1,296 @@
+
+<!doctype html>
+
+<head>  
+    
+<script src="jquery-3.2.1 (1).js"></script>    
+<script >
+    $(document).ready(function(){
+       $("#show").click(function(){
+           
+           $("#modal").toggle(1000);
+           $("#object").toggle(1000);
+       });
+        
+       $("#show").click(function(){
+          $("#navbar").slideDown(1000); 
+       });
+     $("#accordion1").click(function(){
+                    $("#panel1").slideDown(1000);
+                    $("#panel2").slideUp(1000);
+                    $("#panel3").slideUp(1000);
+                });
+     $("#accordion2").click(function(){
+                    $("#panel1").slideUp(1000);
+                    $("#panel2").slideDown(1000);
+                    $("#panel3").slideUp(1000);
+                });
+      $("#accordion3").click(function(){
+                    $("#panel1").slideUp(1000);
+                    $("#panel2").slideUp(1000);
+                    $("#panel3").slideDown(1000);
+                });
+        
+    $("#move_right").click(function(){
+       
+        var div=$("#object");
+        div.animate({ left:'+=250px'},"slow");
+        
+    }); 
+        
+    
+    
+      // O B J E C T      A N I M A T E  
+        
+        
+     $("#move_left").click(function(){
+       
+        var div=$("#object");
+        div.animate({ left:'-=250px'},"slow");
+        
+    }); 
+     $("#move_up").click(function(){
+       
+        var div=$("#object");
+        div.animate({ top:'-=250px'},"slow");
+        
+    }); 
+        
+     $("#move_down").click(function(){
+       
+        var div=$("#object");
+        div.animate({ top:'+=250px'},"slow");
+        
+    }); 
+        
+     $("#reset").click(function(){
+       
+        var div=$("#object");
+        div.animate({ top:'138px',left:'50px'},"slow");
+        
+    }); 
+        
+        
+    // I M A G E   T H U M B N A I L S
+        
+    $("#Img1").click(function(){
+        $("#Img_Main").attr('src','Img1.jpg');
+        
+    });    
+    $("#Img2a").click(function(){
+        $("#Img_Main").attr('src','Img2a.jpg');
+        
+    });    
+    $("#Img3a").click(function(){
+        $("#Img_Main").attr('src','Img3a.jpg');
+        
+    });    
+    $("#Img4a").click(function(){
+        $("#Img_Main").attr('src','Img4a.jpg');
+        
+    });    
+    $("#Img5a").click(function(){
+        $("#Img_Main").attr('src','Img5a.jpg');
+        
+    });    
+    
+    
+    });
+</script>    
+
+<style>
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
+    div{
+        
+        text-align: center;
+        background-color: lightskyblue;
+        border: 2px brown solid; 
+       
+    }
+    #show{
+       position: relative;
+       left: 30px;
+    }
+    
+    #modal{
+        background-color: cadetblue;
+        margin: 25px;
+        padding-top: 100px;
+        padding: 50px;
+        text-align: center;
+        display: none;
+       
+    }
+    
+    nav{
+        border:2px brown solid;
+        background-color: seagreen;
+        display: none;
+        
+    }
+    
+    ul{
+        padding-top: 20px;
+        list-style: none;
+        width: 100%;
+        padding-bottom: 10px;
+
+    }
+    li{
+        display: inline;
+        color: azure;
+        font-size: 18px;
+        font-weight: bolder;
+        font-family: cursive;
+        
+        padding: 90px;
+    }
+    .Wrapper{
+        position: relative;
+        top:80px;
+    }
+     #accordion1, #accordion2, #accordion3 {
+                background-color: #eee;
+                color: #444;
+                padding: 20px;
+                width: 100%;
+                
+                text-align: left;
+                border: none;
+            }
+            #accordion1:hover, #accordion2:hover,#accordion3:hover{
+                background-color: #ddd;
+            }
+            #panel1, #panel2, #panel3 {
+                padding: 0 18px;
+                background-color: white;
+                display: none;
+            }
+    
+    
+    #object_animate{
+        margin-top: 40px;
+        margin-left: 40px;
+        background-color: white;
+        border: none;
+    }
+    #object{
+        background-color: green;
+        width: 60px;
+        height: 60px;
+        position: absolute;
+        border: 1px solid black;
+    }
+    
+    
+    
+    #thumbnails > img {
+        height: 130px;
+        margin: 30px;
+        width: 110px;
+        border: 5px solid white;
+    }
+    #thumbnails{
+         border: 1px solid black;
+    }
+    #container{
+        border: none;
+    }
+</style>
+</head>
+
+    
+    
+<body >
+    
+<nav id="navbar">
+    <ul>
+        <li> Home </li>
+        <li> Shop </li>
+        <li> About Us </li>
+    </ul>
+</nav>
+ <div> 
+   <h1> This is example for modal bar</h1>
+   <button id="show">SHOW </button>
+   <div id="modal"> Example</div>
+</div>
+    
+<div id="object_animate">
+    <div id="object">
+    
+    </div>
+    
+    <button id="move_right">right</button>
+    <button id="move_left">left</button>
+    <button id="move_up">up</button>
+    <button id="move_down">down</button>
+     <button id="reset">reset</button>
+    
+    
+</div>    
+    
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+        
+
+    
+ <div id="container">
+    <img src="Img1.jpg" id="Img_Main" style=" height: 550px; width: 800px; margin: 20px; border: 10px solid white; ">
+    <div id="thumbnails">
+     <img src="Img1.jpg" id="Img1">
+     <img src="img2a.jpg" id="Img2a">
+     <img src="img3a.jpg" id="Img3a">
+     <img src="img4a.jpg" id="Img4a">
+     <img src="img5a.jpg" id="Img5a">
+    </div>
+    
+   
+    
+</div>
+    
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+ <div class="Wrapper">
+        <button id="accordion1">What is Jquery?</button>
+        <div id="panel1">
+          <p>jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers. With a combination of versatility and extensibility, jQuery has changed the way that millions of people write JavaScript.</p>
+        </div>
+
+        <button id="accordion2">What You Should Already Know</button>
+        <div id="panel2">
+            <p>What You Should Already Know
+                Before you start studying jQuery, you should have a basic knowledge of:
+                                
+            </p>
+        </div>
+
+        <button id="accordion3">Jquery API</button>
+        <div id="panel3">
+          <iframe src="http://api.jquery.com" width="100%" height="600px"></iframe>
+        </div>
+</div>
+ 
+    
+<div style='text-align: right;position: fixed;z-index:9999999;bottom: 0; width: 100%;cursor: pointer;line-height: 0;'>
+    <a title="Hosted on free web hosting 000webhost.com. Host your own website for FREE." target="_blank" href="https://www.000webhost.com/?utm_source=000webhostapp&utm_campaign=000_logo&utm_medium=website_karunyaur15cs025&utm_content=footer_img"><img src="https://cloud.githubusercontent.com/assets/23024110/20663010/9968df22-b55e-11e6-941d-edbc894c2b78.png"  alt="www.000webhost.com"></a></div></body>
+</html>
+
