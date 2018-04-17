@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Javascript</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            function func()
+            {
+                var a = document.getElementById("txt").value;
+                var spli = a.split(" ");
+                var num = spli.length;
+                document.getElementById('wordnum').innerHTML = "Num. of words : "+num;
+                var num2=[];
+                for(var i=0;i<num;i++)
+                {
+                    num2[i] = spli[i].length;
+                }
+                
+                var max=num2[0];
+                var maxindex=0;
+                var min=num2[0];
+                var minindex=0;
+                
+                for(var j=0;j<num;j++)
+                {
+                    if(num2[j]<min)
+                        {
+                           min=num2[j];
+                           minindex=j;
+                        }
+                    if(num2[j]>max)
+                        {
+                            max=num2[j];
+                            maxindex=j;
+                        }
+                }
+                document.getElementById('wordlen').innerHTML = "Length of words : "+num2;
+                document.getElementById('long').innerHTML = "Longest : "+spli[maxindex];
+                document.getElementById('small').innerHTML = "Shortest : "+spli[minindex];
+//                document.getElementById('test1').innerHTML = a;
+            }
+            
+            function calc()
+            {
+                var mark1 = parseFloat(document.getElementById("marks").value);
+                if(mark1>=95)
+                    grade='O';
+                else if(mark1<=95&&mark1>=90)
+                    grade='S';
+                else if(mark1<=90&&mark1>=80)
+                    grade='A';
+                else if(mark1<=80&&mark1>=70)
+                    grade='B';
+                else if(mark1<=70&&mark1>=60)
+                    grade='C';
+                else if(mark1<=60&&mark1>=50)
+                    grade='P';
+                else
+                    grade='R';
+                
+                document.getElementById("score").innerHTML = grade;
+            }
+            
+            function design()
+            {
+                var rownum = document.getElementById("rows").value;
+                var colnum = document.getElementById("cols").value;
+                var arr = ["pattern1.png","pattern2.png"];
+                for(var i=0;i<rownum;i++)
+                {
+                    for(var j=0;j<colnum;j++)
+                    {
+                        var number = Math.floor((Math.random()*2)+0);
+                        if(number>0)
+                            document.getElementById("pattern").innerHTML += "<img src= 1.jpg width =100px height= 100px>";
+                        else
+                         document.getElementById("pattern").innerHTML += "<img src= 2.jpg width =100px height= 100px>";
+                    }
+                    document.getElementById("pattern").innerHTML +="<br/>";
+                }
+
+            }
+            
+            function convert()
+            {
+                var f_index = document.getElementById("from").selectedIndex; // from
+                var t_index = document.getElementById("to").selectedIndex; // to
+                //var value = document.getElementById("from")[index].value; // return value 
+                var data = document.getElementById("data").value;
+                if(f_index==t_index)
+                {
+                    document.getElementById("answer").innerHTML=data;
+                    //document.getElementById("answer1").appendChild(data);
+                }
+                else if(f_index=='0')
+                {
+                    var kg = data*0.45359237;
+                    document.getElementById("answer").innerHTML=kg;
+                    //document.getElementById("answer").appendChild(data);
+                }
+                else
+                {
+                    var pound = data*2.20462262;
+                    document.getElementById("answer").innerHTML=pound;
+                    //document.getElementById("answer").appendChild(data);
+                }
+            }
+            
+            function pizza()
+            {
+                var size = Number(document.querySelector('input[name="size"]:checked').value); //radio
+                var tip = Number(document.querySelector('input[name="tip"]:checked').value); //radio
+                var tax = size*9/100;
+                var tipamt = size*tip/100;
+                var amt = size+tax+tipamt;
+                document.getElementById("price").innerHTML=amt;
+            }
+            
+        </script>
+    </head>
+    <body>
+            <h2>String checker</h2>
+            <fieldset>
+            <input type="text" id="txt" placeholder="Enter text">
+            <input type="button" id="check" onclick="func()" value="Check">
+            <div id="wordnum"></div>
+            <div id="wordlen"></div>
+            <div id="long"></div>
+            <div id="small"></div>
+            </fieldset>
+            
+            <h2>Grade Calculator</h2>
+            <fieldset>
+            <input type="text" id="marks" placeholder="Enter marks">
+            <button onclick="calc();">Get Grade!</button> <br/><br/>
+            Your Grade is : <span id="score"></span> <br/>
+            </fieldset>
+            
+            <h2>Pattern Generator</h2>
+            <fieldset>
+            <input type="text" id="rows" placeholder="Enter rows">
+            <input type="text" id="cols" placeholder="Enter columns">
+            <button onclick="design();">Pattern Design</button> <br/><br/>
+            <div id="pattern"></div>
+            </fieldset>
+            
+            <h2>Weight-inator</h2>
+            <fieldset> 
+                Convert &nbsp;&nbsp;
+            <input type="text" id="data" placeholder="Enter value">
+            <select id="from">  
+                <option>Pounds</option>  
+                <option>Kilograms</option>  
+            </select>  
+                TO  
+            <select id ="to"> 
+                <option>Pounds</option>  
+                <option>Kilograms</option> 
+            </select>  
+            <button onclick="convert();">Calculate</button> <span id="answer"></span>  
+            </fieldset>
+            
+            <h2>
+                <img src="LOGO.png" style="display:inline-block" height="30" width="30" alt="404">
+                cDonalds
+            </h2>
+            <fieldset>
+                Pizza size
+                <label>
+                    <input type="radio" value="100" name="size" id="s1" /> Small
+                </label>  
+                <label>
+                    <input type="radio" value="200" name="size" id="s2" /> Medium
+                </label> 
+                <label>
+                    <input type="radio" value="400" name="size" id="s3" /> Large
+                </label> <br/><br/>
+                Tip:  
+                <label>
+                    <input type="radio" value="10" name="tip" id="r1" /> 10%
+                </label>  
+                <label>
+                    <input type="radio" value="15" name="tip" id="r2" checked="checked" /> 15% 
+                </label> 
+                <label>
+                    <input type="radio" value="20" name="tip" id="r3" /> 20%
+                </label> <br/><br/>
+                <button id="submit" onclick="pizza();">Calculate Order</button>
+                <p> 
+                    Cost of order: <span id="price"></span>  
+                </p> 
+            </fieldset> 
+    </body>
+</html>
